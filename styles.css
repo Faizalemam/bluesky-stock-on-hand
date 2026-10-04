@@ -23,3 +23,8 @@ header{display:flex;flex-direction:column;justify-content:center;align-items:cen
 .pagination span{font-size:12px;font-weight:700;text-align:center}.pagination button{min-height:44px}.pagination button:disabled{cursor:default}
 #inventoryStart{scroll-margin-top:16px}
 @media(max-width:720px){.row>div:first-child>label{font-size:14px;font-weight:800}.pagination{gap:8px}.pagination button{padding:12px 10px}.pagination span{font-size:11px}}
+
+/* Keep the brand header visible while counting. */
+header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 3px 14px #0d23400d}
+#inventoryStart{scroll-margin-top:190px}
+@media(max-width:720px){#inventoryStart{scroll-margin-top:110px}}

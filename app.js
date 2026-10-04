@@ -52,7 +52,7 @@ $('newInventory').onclick=()=>{if(busy)return;const last=deviceReceipt();if(cool
 window.addEventListener('storage',event=>{if(event.key===key||event.key==='bsc-last-receipt')restoreSubmitted();});
 window.addEventListener('focus',()=>restoreSubmitted());
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)restoreSubmitted();});
-if(restoreSubmitted()){const saved=draft.receipt;if(cooldownRemaining(saved)>0){$('alreadyReference').textContent=saved.id;$('alreadyBranch').textContent=saved.branch;$('alreadyRelease').textContent=new Date(saved.submittedAt+inventoryCooldown).toLocaleString('en-GB',{timeZone:'Asia/Riyadh'})+' (Riyadh time)';$('alreadySubmitted').showModal();}}else{countNotice.showModal();try{const last=JSON.parse(localStorage.getItem('bsc-last-receipt'));if(last&&typeof last.id==='string')showSubmissionReceipt(last);}catch{}}
+if(restoreSubmitted()){const saved=draft.receipt;if(cooldownRemaining(saved)>0){$('alreadyReference').textContent=saved.id;$('alreadyBranch').textContent=saved.branch;$('alreadyEmployee').textContent=saved.employee||'Not recorded';$('alreadyRelease').textContent=new Date(saved.submittedAt+inventoryCooldown).toLocaleString('en-GB',{timeZone:'Asia/Riyadh'})+' (Riyadh time)';$('alreadySubmitted').showModal();}}else{countNotice.showModal();try{const last=JSON.parse(localStorage.getItem('bsc-last-receipt'));if(last&&typeof last.id==='string')showSubmissionReceipt(last);}catch{}}
 
 $('closeAlreadySubmitted').onclick=()=>$('alreadySubmitted').close();
 

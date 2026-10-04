@@ -11,3 +11,6 @@ header{display:flex;flex-direction:column;justify-content:center;align-items:cen
 
 /* Unit and bottle controls: size first, quantity second. */
 .quantity{flex-shrink:0}.quantity .bottle-size{width:155px;margin:0;font-size:12px}.quantity span{width:76px;overflow-wrap:anywhere}.row>div:first-child{min-width:0}.row label{overflow-wrap:anywhere}@media(max-width:720px){.row{flex-wrap:wrap;gap:8px}.row>div:first-child{width:100%}.quantity{width:100%;justify-content:flex-end}.quantity .bottle-size{width:155px;flex:1;max-width:220px}.quantity input{width:88px}.quantity span{width:66px;font-size:10px}.quantity select,.quantity input{min-height:44px}}
+
+/* Count both bottle sizes independently. */
+.quantity-field{display:flex;align-items:center;gap:8px}.bottle-quantities{align-items:flex-end;gap:12px}.bottle-quantities .quantity-field{display:flex;flex-direction:column;align-items:stretch;gap:6px}.bottle-quantities label{font-size:11px;color:var(--blue);text-align:center}.bottle-quantities input{width:110px}.bottle-quantities .quantity-field{min-width:0}@media(max-width:720px){.bottle-quantities{justify-content:stretch}.bottle-quantities .quantity-field{flex:1}.bottle-quantities input{width:100%}.bottle-quantities label{font-size:12px}.quantity-field input{min-height:44px}}

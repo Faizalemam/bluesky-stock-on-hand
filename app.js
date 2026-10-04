@@ -40,7 +40,7 @@ $('setup').hidden=!!CONFIG.endpoint;$('submit').disabled=!CONFIG.endpoint;render
 
 const countNotice=$('countNotice');
 $('acknowledgeCount').onclick=()=>countNotice.close();
-countNotice.showModal();
+// Show the count notice only when this browser is ready for a new count.
 
 function showSubmissionReceipt(receipt,scroll=false){$('submissionReceipt').hidden=false;$('receiptNumber').textContent=receipt.id;$('receiptBranch').textContent=receipt.branch+' · '+receipt.employee;$('receiptEmail').textContent=receipt.emailStatus==='Sent'?'Inventory report email sent.':'Inventory saved. Report email status: '+(receipt.emailStatus||'Pending')+'.';if(scroll)$('submissionReceipt').scrollIntoView({behavior:'smooth',block:'center'});}
 const inventoryCooldown=24*60*60*1000;let cooldownTimer;
@@ -52,7 +52,9 @@ $('newInventory').onclick=()=>{if(busy)return;const last=deviceReceipt();if(cool
 window.addEventListener('storage',event=>{if(event.key===key||event.key==='bsc-last-receipt')restoreSubmitted();});
 window.addEventListener('focus',()=>restoreSubmitted());
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)restoreSubmitted();});
-if(!restoreSubmitted()){try{const last=JSON.parse(localStorage.getItem('bsc-last-receipt'));if(last&&typeof last.id==='string')showSubmissionReceipt(last);}catch{}}
+if(restoreSubmitted()){const saved=draft.receipt;if(cooldownRemaining(saved)>0){$('alreadyReference').textContent=saved.id;$('alreadyBranch').textContent=saved.branch;$('alreadyRelease').textContent=new Date(saved.submittedAt+inventoryCooldown).toLocaleString('en-GB',{timeZone:'Asia/Riyadh'})+' (Riyadh time)';$('alreadySubmitted').showModal();}}else{countNotice.showModal();try{const last=JSON.parse(localStorage.getItem('bsc-last-receipt'));if(last&&typeof last.id==='string')showSubmissionReceipt(last);}catch{}}
+
+$('closeAlreadySubmitted').onclick=()=>$('alreadySubmitted').close();
 
 function quantityIssue(){for(const p of PRODUCTS){const unit=p.unit.toUpperCase().split('*')[0].trim(),base=unit==='UNITS'?'UNIT':unit;for(const size of (p.sizes.length?p.sizes:[''])){const value=size?draft.values[p.id]?.[size]:draft.values[p.id];if(!valid(value))continue;const n=Number(value),max=CONFIG.maxByUnit[base]||5000;if(n>max)return p.name+': quantity exceeds '+max+'. Please check the count or contact the administrator.';if(CONFIG.wholeUnits.includes(base)&&!Number.isInteger(n))return p.name+': enter a whole-number quantity.';}}return '';}
 window.bscSecurity=info=>{if(info.enabled){CONFIG.branchSecurity=true;CONFIG.maxByUnit=info.maxByUnit;CONFIG.wholeUnits=info.wholeUnits;$('branchPinField').hidden=false;}delete window.bscSecurity;};

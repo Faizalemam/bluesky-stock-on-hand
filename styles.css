@@ -14,3 +14,5 @@ header{display:flex;flex-direction:column;justify-content:center;align-items:cen
 
 /* Count both bottle sizes independently. */
 .quantity-field{display:flex;align-items:center;gap:8px}.bottle-quantities{align-items:flex-end;gap:12px}.bottle-quantities .quantity-field{display:flex;flex-direction:column;align-items:stretch;gap:6px}.bottle-quantities label{font-size:11px;color:var(--blue);text-align:center}.bottle-quantities input{width:110px}.bottle-quantities .quantity-field{min-width:0}@media(max-width:720px){.bottle-quantities{justify-content:stretch}.bottle-quantities .quantity-field{flex:1}.bottle-quantities input{width:100%}.bottle-quantities label{font-size:12px}.quantity-field input{min-height:44px}}
+
+.developer-credit{display:flex;flex-direction:column;gap:4px;text-align:right;font-size:11px;letter-spacing:0}.developer-credit a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}.developer-credit a:hover{color:var(--navy)}@media(max-width:720px){footer{align-items:center}.developer-credit{font-size:10px}}

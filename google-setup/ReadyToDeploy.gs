@@ -2173,7 +2173,7 @@ const PRODUCTS = [
 
 
 // Paste Catalog.gs beside this file. Run setupInventory once, then deploy as Web app.
-const INVENTORY_SHEET_ID='1rLjqAsIxXTd_ZrDBkShNNkjFjuj6gQ9W8PSn-YhRv_s';
+const INVENTORY_SHEET_ID='1udtvE2eZvgVbsQgUzz7iM0QlfO_s06j49ePmfZuFkYg';
 const INVENTORY_TAB='Inventory Reports v4';
 const EMAIL_TO='Samad@blueskycoffe.com', EMAIL_CC='Faizal@itdelhi.in';
 function spreadsheet_(){return SpreadsheetApp.openById(INVENTORY_SHEET_ID);}

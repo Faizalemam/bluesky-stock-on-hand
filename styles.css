@@ -8,3 +8,6 @@ header{height:auto;min-height:110px;padding:18px 5%;gap:24px}.brand{width:min(85
 
 /* Center the complete bilingual brand banner across the header. */
 header{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:0;height:auto;padding:18px 24px;gap:8px;overflow:hidden}.brand{display:block;flex:none;width:100%;max-width:1050px;margin:0 auto}.brand-logo{display:block;width:100%;max-width:100%;height:auto;max-height:none;object-fit:contain;margin:0 auto}.internal{display:block;text-align:center;font-size:10px;letter-spacing:1px}@media(max-width:720px){header{padding:12px 10px;gap:5px}.brand{width:100%;max-width:100%}.brand-logo{width:100%;height:auto}.internal{display:block;font-size:9px}}
+
+/* Unit and bottle controls: size first, quantity second. */
+.quantity{flex-shrink:0}.quantity .bottle-size{width:155px;margin:0;font-size:12px}.quantity span{width:76px;overflow-wrap:anywhere}.row>div:first-child{min-width:0}.row label{overflow-wrap:anywhere}@media(max-width:720px){.row{flex-wrap:wrap;gap:8px}.row>div:first-child{width:100%}.quantity{width:100%;justify-content:flex-end}.quantity .bottle-size{width:155px;flex:1;max-width:220px}.quantity input{width:88px}.quantity span{width:66px;font-size:10px}.quantity select,.quantity input{min-height:44px}}

@@ -28,3 +28,5 @@ header{display:flex;flex-direction:column;justify-content:center;align-items:cen
 header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 3px 14px #0d23400d}
 #inventoryStart{scroll-margin-top:190px}
 @media(max-width:720px){#inventoryStart{scroll-margin-top:110px}}
+
+.submission-receipt{border:2px solid #318367;background:#f4fbf8;scroll-margin-top:170px}.submission-receipt[hidden]{display:none}.submission-receipt h2{color:#20694f}.submission-receipt p{font-size:13px}.receipt-number{font-size:17px;font-weight:800;overflow-wrap:anywhere;user-select:all;background:#fff;border:1px solid #cce3d9;border-radius:8px;padding:14px;margin-top:8px;letter-spacing:.4px}

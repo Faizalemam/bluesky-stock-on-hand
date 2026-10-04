@@ -40,6 +40,11 @@ $('setup').hidden=!!CONFIG.endpoint;$('submit').disabled=!CONFIG.endpoint;render
 
 const countNotice=$('countNotice');
 $('acknowledgeCount').onclick=()=>countNotice.close();
+const noticeButtons={en:'Understood, continue',hi:'समझ गया, आगे बढ़ें',bn:'বুঝেছি, এগিয়ে যাই'};
+function setNoticeLanguage(language){if(!Object.hasOwn(noticeButtons,language))language='en';$('noticeLanguage').value=language;['en','hi','bn'].forEach(code=>{$('notice-'+code).hidden=code!==language;});$('acknowledgeCount').textContent=noticeButtons[language];$('acknowledgeCount').setAttribute('lang',language);}
+$('noticeLanguage').onchange=()=>{setNoticeLanguage($('noticeLanguage').value);try{localStorage.setItem('bsc-notice-language',$('noticeLanguage').value);}catch{}};
+try{setNoticeLanguage(localStorage.getItem('bsc-notice-language')||'en');}catch{setNoticeLanguage('en');}
+
 // Show the count notice only when this browser is ready for a new count.
 
 function showSubmissionReceipt(receipt,scroll=false){$('submissionReceipt').hidden=false;$('receiptNumber').textContent=receipt.id;$('receiptBranch').textContent='Branch Name: '+receipt.branch;$('receiptEmployee').textContent='Employee Name: '+(receipt.employee||'Not recorded');$('receiptEmail').textContent=receipt.emailStatus==='Sent'?'Inventory report email sent.':'Inventory saved. Report email status: '+(receipt.emailStatus||'Pending')+'.';if(scroll)$('submissionReceipt').scrollIntoView({behavior:'smooth',block:'center'});}

@@ -1,7 +1,7 @@
 # Activate central inventory and branch email reports
 
 Prepared central Google Sheet:
-https://docs.google.com/spreadsheets/d/1rLjqAsIxXTd_ZrDBkShNNkjFjuj6gQ9W8PSn-YhRv_s/edit
+https://docs.google.com/spreadsheets/d/1udtvE2eZvgVbsQgUzz7iM0QlfO_s06j49ePmfZuFkYg/edit
 
 The website is NOT connected until the deployed /exec URL is entered in config.js.
 

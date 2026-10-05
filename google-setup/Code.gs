@@ -3,7 +3,7 @@ const INVENTORY_SHEET_ID='1udtvE2eZvgVbsQgUzz7iM0QlfO_s06j49ePmfZuFkYg';
 const INVENTORY_TAB='Inventory Reports v4';
 const EMAIL_FROM='inventory@blueskycoffe.com';
 function verifyInventorySender(){if(!GmailApp.getAliases().some(a=>a.toLowerCase()===EMAIL_FROM.toLowerCase()))throw Error('Verify inventory@blueskycoffe.com in the deploying Gmail account Send mail as settings first.');console.log('Inventory sender alias verified.');}
-const EMAIL_TO='Samad@blueskycoffe.com', EMAIL_CC='Faizal@itdelhi.in,Saber@blueskycoffe.com';
+const EMAIL_TO='Samad@blueskycoffe.com', EMAIL_CC='Faizal@itdelhi.in,Saber@blueskycoffe.com,m.osman@blueskycoffe.com';
 function spreadsheet_(){return SpreadsheetApp.openById(INVENTORY_SHEET_ID);}
 function fields_(){return PRODUCTS.flatMap(p=>p.sizes.length?p.sizes.map(size=>({p:p,size:size})):[{p:p,size:''}]);}
 function sheet_(){const ss=spreadsheet_();let sheet=ss.getSheetByName(INVENTORY_TAB);if(!sheet){sheet=ss.insertSheet(INVENTORY_TAB);const headers=['Receipt ID','Submitted at (Riyadh)','Branch Name','Employee Name','Filled products','Partly filled products','Not filled products','Filled quantity fields','Blank quantity fields','Email status','Email error',...fields_().map(f=>f.p.code+' | '+f.p.name+' | '+(f.size?f.size+' BTL':f.p.unit))];if(sheet.getMaxColumns()<headers.length)sheet.insertColumnsAfter(sheet.getMaxColumns(),headers.length-sheet.getMaxColumns());sheet.appendRow(headers);sheet.setFrozenRows(1);sheet.setFrozenColumns(4);sheet.getRange(1,1,1,headers.length).setBackground('#eeeeee').setFontWeight('bold').setWrap(true);}return sheet;}

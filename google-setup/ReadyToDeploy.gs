@@ -2228,3 +2228,16 @@ function recordRevision_(sheet,row,branch,day,id){const col=revisionColumns_(she
 function cacheSubmissionError_(d,message){if(d&&typeof d.id==='string'&&/^[a-f0-9-]{36}$/.test(d.id)&&typeof d.attempt==='string'&&/^[a-f0-9-]{36}$/.test(d.attempt))CacheService.getScriptCache().put('BSC_ERROR_'+d.id+'_'+d.attempt,JSON.stringify({saved:false,error:message}),300);}
 function submissionError_(id,attempt){if(!/^[a-f0-9-]{36}$/.test(id)||!/^[a-f0-9-]{36}$/.test(attempt))return null;const cached=CacheService.getScriptCache().get('BSC_ERROR_'+id+'_'+attempt);return cached?JSON.parse(cached):null;}
 function doPost(e){const lock=LockService.getScriptLock();let row,d;try{d=JSON.parse(e.parameter.payload||'');if(!/^[a-f0-9-]{36}$/.test(d.id)||typeof d.branch!=='string'||typeof d.employee!=='string'||!d.branch.trim()||!d.employee.trim()||d.branch.length>100||d.employee.length>100||!d.values||typeof d.values!=='object')throw Error('Invalid branch or employee details.');if(d.website)throw Error('Submission rejected. Please reload the form.');const branch=d.branch.trim();if(!BRANCH_NAMES.includes(branch))throw Error('Select a valid branch from the list.');lock.waitLock(30000);const sheet=sheet_(),existing=findReceipt_(sheet,d.id);if(existing){row=existing.getRow();if(String(sheet.getRange(row,3).getValue())!==branch)throw Error('Reference belongs to another branch.');}else{checkLimits_(d);const counts=normalize_(d);if(counts.filled!==PRODUCTS.length)throw Error('All product quantities are mandatory. Enter 0 for no stock.');const at=Utilities.formatDate(new Date(),'Asia/Riyadh','yyyy-MM-dd HH:mm:ss');sheet.appendRow([d.id,at,safe_(branch),safe_(d.employee.trim()),counts.filled,counts.partial,counts.blank,counts.filledFields,counts.quantities.length-counts.filledFields,'Pending','',...counts.quantities]);row=sheet.getLastRow();recordRevision_(sheet,row,branch,at.slice(0,10),d.id);SpreadsheetApp.flush();}}catch(err){const message=String(err.message||'Submission failed. Please retry.');cacheSubmissionError_(d,message);console.error(message);return ContentService.createTextOutput('Rejected');}finally{if(lock.hasLock())lock.releaseLock();}try{sendReport_(row);}catch(err){console.error(String(err));}return ContentService.createTextOutput('Saved');}
+
+
+function sendInventoryTestEmail() {
+  verifyInventorySender();
+  const reference = 'BSC-TEST-' + Utilities.formatDate(new Date(), 'Asia/Riyadh', 'yyyyMMdd-HHmmss');
+  GmailApp.sendEmail(
+    EMAIL_TO,
+    'TEST | Blue Sky Inventory Email | ' + reference,
+    'Assalam Alaikum,\n\nThis is a test email from the Blue Sky Inventory system.\n\nReference: ' + reference + '\nSender: ' + EMAIL_FROM + '\n\nNo inventory submission has been created and no stock data has been changed.\n\nBlue Sky Inventory',
+    { from: EMAIL_FROM, replyTo: EMAIL_FROM, cc: EMAIL_CC, name: 'Blue Sky Inventory' }
+  );
+  console.log('Test email accepted for sending. Reference: ' + reference + '. Check the recipients inbox and spam folder.');
+}

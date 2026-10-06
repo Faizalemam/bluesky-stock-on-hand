@@ -38,3 +38,5 @@ The 12 existing historical submissions were revalued in the private Google Sheet
 IT- Testing is an additional test branch; operational branches remain unchanged. Product quantities are optional only for this branch. Branch and employee name remain required, and entered quantities retain numeric/unit/limit validation. Blank quantities remain blank and are reported as uncounted, never silently converted to zero. Test reports are labelled Test and their email subject begins with TEST; they are excluded from operational branch-count and stock-value totals. The existing device cooldown is retained.
 
 Paste the updated private full script and deploy a New version on the existing /exec URL. No setup rerun is needed. The frontend shows IT- Testing only when the deployed backend advertises support, avoiding requests to an old branch whitelist.
+
+Decimal quantities are allowed for every unit and branch. Numeric, nonnegative and unit maximum checks remain active. Deploy a new Apps Script version to activate this change.

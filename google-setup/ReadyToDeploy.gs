@@ -3839,7 +3839,7 @@ const EMAIL_TO='Samad@blueskycoffe.com', EMAIL_CC='Faizal@itdelhi.in,Saber@blues
 const CATALOG_VERSION='branches-20261006-v1';
 const TEST_BRANCH='IT- Testing';
 const MAX_BY_UNIT={PCS:5000,UNIT:5000,PKT:2000,ROLL:2000,BTL:500,KG:1000,ML:100000,GRM:100000,LTR:1000,SACHET:50000,CAN:5000,CRT:5000,CUP:50000,BOX:5000,BDL:5000};
-const WHOLE_NUMBER_UNITS=['PCS','UNIT','PKT','ROLL','BTL','SACHET','CAN','CRT','CUP','BOX','BDL'];
+const WHOLE_NUMBER_UNITS=[]; // Decimal stock quantities are allowed for all units.
 function spreadsheet_(){return SpreadsheetApp.openById(INVENTORY_SHEET_ID);}
 function fields_(products){return (products||PRODUCTS).flatMap(p=>p.sizes.length?p.sizes.map(size=>({p,size})):[{p,size:''}]);}
 function datasets_(){return [{name:INVENTORY_TAB,products:PRODUCTS,costed:true,version:CATALOG_VERSION},{name:'Inventory Reports v4',products:LEGACY_PRODUCTS,costed:true,revalued:true,version:'legacy-v4'}];}

@@ -38,6 +38,8 @@ const CONFIG = {
   "RIYADH 10",
   "HAFAR 1",
   "HAFER 4",
-  "NAIRIYAH"
+  "NAIRIYAH",
+  "IT- Testing"
 ]
 };
+

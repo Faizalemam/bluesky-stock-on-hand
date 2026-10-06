@@ -39,7 +39,7 @@ IT- Testing is an additional test branch; operational branches remain unchanged.
 
 Paste the updated private full script and deploy a New version on the existing /exec URL. No setup rerun is needed. The frontend shows IT- Testing only when the deployed backend advertises support, avoiding requests to an old branch whitelist.
 
-Decimal quantities are allowed for every unit and branch. Numeric and nonnegative checks remain active. BTL maximum is 50 bottles per quantity field. Other units have no business maximum. Deploy a new Apps Script version to activate this change.
+Decimal quantities are allowed for every unit and branch. Numeric and nonnegative checks remain active. BTL maximum is 50 bottles per quantity field. KG maximum is 5 kilograms per field; other units have no business maximum. Deploy a new Apps Script version to activate this change.
 
 ## Admin v7
 Multiple branch selection, Riyadh date ranges, report/email/valuation/catalogue status filters, repeated branch/day review, minimum/maximum report stock value, sorting and selected exports.
@@ -47,3 +47,7 @@ Only the owner login can remove/restore reports. Samad retains view, filter, exp
 Replace existing Apps Script source with the private full download and deploy a new version on the existing URL. Existing setup and passwords stay configured.
 
 BTL quantities (including sized/composite BTL units): 0–50 inclusive; decimal values allowed. The same BTL limit is enforced in the branch form and on the server. Applies to IT- Testing too.
+
+KG: maximum 5 KG inclusive, with decimals (500 grams = 0.500 KG). Red unit guidance is shown beside KG and BTL inputs. BTL retains a maximum of 50 bottles per field.
+
+Every product quantity field shows red unit guidance. KG and LTR examples distinguish grams/millilitres from kilograms/litres. Bottle examples follow 1000/700/750 ML size, with remaining-content fractions; package/container units count containers rather than contents. Decimal quantities remain allowed for every unit. Negative/non-numeric values are rejected; KG maximum 5 and BTL maximum 50 are enforced on the server and client.

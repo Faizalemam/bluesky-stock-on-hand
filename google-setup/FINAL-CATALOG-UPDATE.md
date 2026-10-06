@@ -39,9 +39,11 @@ IT- Testing is an additional test branch; operational branches remain unchanged.
 
 Paste the updated private full script and deploy a New version on the existing /exec URL. No setup rerun is needed. The frontend shows IT- Testing only when the deployed backend advertises support, avoiding requests to an old branch whitelist.
 
-Decimal quantities are allowed for every unit and branch. Numeric and nonnegative checks remain active. Quantity business maximums are removed. Deploy a new Apps Script version to activate this change.
+Decimal quantities are allowed for every unit and branch. Numeric and nonnegative checks remain active. BTL maximum is 50 bottles per quantity field. Other units have no business maximum. Deploy a new Apps Script version to activate this change.
 
 ## Admin v7
 Multiple branch selection, Riyadh date ranges, report/email/valuation/catalogue status filters, repeated branch/day review, minimum/maximum report stock value, sorting and selected exports.
 Only the owner login can remove/restore reports. Samad retains view, filter, export and resend access. Removed reports have Sheet status Deleted, leave active views and email retries, and remain recoverable with an Admin Audit record. No reports are removed automatically.
 Replace existing Apps Script source with the private full download and deploy a new version on the existing URL. Existing setup and passwords stay configured.
+
+BTL quantities (including sized/composite BTL units): 0–50 inclusive; decimal values allowed. The same BTL limit is enforced in the branch form and on the server. Applies to IT- Testing too.

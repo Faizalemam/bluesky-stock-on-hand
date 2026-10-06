@@ -5,7 +5,7 @@ const EMAIL_FROM='inventory@blueskycoffe.com';
 const EMAIL_TO='Samad@blueskycoffe.com', EMAIL_CC='Faizal@itdelhi.in,Saber@blueskycoffe.com,m.osman@blueskycoffe.com';
 const CATALOG_VERSION='branches-20261006-v1';
 const TEST_BRANCH='IT- Testing';
-const MAX_BY_UNIT={}; // No business maximum for inventory quantities.
+const MAX_BY_UNIT={BTL:50}; // BTL allows up to 50 bottles; other units have no business maximum.
 const WHOLE_NUMBER_UNITS=[]; // Decimal stock quantities are allowed for all units.
 function spreadsheet_(){return SpreadsheetApp.openById(INVENTORY_SHEET_ID);}
 function fields_(products){return (products||PRODUCTS).flatMap(p=>p.sizes.length?p.sizes.map(size=>({p,size})):[{p,size:''}]);}

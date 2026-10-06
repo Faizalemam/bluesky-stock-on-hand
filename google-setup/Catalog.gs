@@ -1,4 +1,1665 @@
-const PRODUCTS = [
+const PRODUCTS=[
+  {
+    "id": "p1006",
+    "code": "1006",
+    "name": "Honey Cake. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 1
+  },
+  {
+    "id": "p1007",
+    "code": "1007",
+    "name": "Saffron Milk Cake. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 2
+  },
+  {
+    "id": "p1009",
+    "code": "1009",
+    "name": "Red Velvet Cake. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 3
+  },
+  {
+    "id": "p1010",
+    "code": "1010",
+    "name": "Chocolate Cookies. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 4
+  },
+  {
+    "id": "p1011",
+    "code": "1011",
+    "name": "Vanilla Cookies. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 5
+  },
+  {
+    "id": "p1013",
+    "code": "1013",
+    "name": "Classic Donut. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 6
+  },
+  {
+    "id": "p1014",
+    "code": "1014",
+    "name": "Chocolate Donut. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 7
+  },
+  {
+    "id": "p1015",
+    "code": "1015",
+    "name": "Cheese Croissant. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 8
+  },
+  {
+    "id": "p1016",
+    "code": "1016",
+    "name": "Oreo. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 9
+  },
+  {
+    "id": "p1017",
+    "code": "1017",
+    "name": "Kit Kat. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 10
+  },
+  {
+    "id": "p1018",
+    "code": "1018",
+    "name": "Snickers. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 11
+  },
+  {
+    "id": "p1019",
+    "code": "1019",
+    "name": "Cotton Candy. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 12
+  },
+  {
+    "id": "p1025",
+    "code": "1025",
+    "name": "Sandwich Halloumi. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 13
+  },
+  {
+    "id": "p1028",
+    "code": "1028",
+    "name": "Sandwich Chicken. BSC",
+    "category": "Bakery & snacks",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 14
+  },
+  {
+    "id": "p2001",
+    "code": "2001",
+    "name": "Black Berry Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 15
+  },
+  {
+    "id": "p2002",
+    "code": "2002",
+    "name": "Blue Berry Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 16
+  },
+  {
+    "id": "p2003",
+    "code": "2003",
+    "name": "Blue Curacao (LGN) Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 17
+  },
+  {
+    "id": "p2004",
+    "code": "2004",
+    "name": "Straw Berry Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 18
+  },
+  {
+    "id": "p2005",
+    "code": "2005",
+    "name": "Grenadine (Mixed Berry) Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 19
+  },
+  {
+    "id": "p2006",
+    "code": "2006",
+    "name": "Hazelnut Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 20
+  },
+  {
+    "id": "p2007",
+    "code": "2007",
+    "name": "Vanilla Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 21
+  },
+  {
+    "id": "p2008",
+    "code": "2008",
+    "name": "Lavender Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 22
+  },
+  {
+    "id": "p2009",
+    "code": "2009",
+    "name": "Rasp Berry Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 23
+  },
+  {
+    "id": "p2010",
+    "code": "2010",
+    "name": "Water Melon Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 24
+  },
+  {
+    "id": "p2011",
+    "code": "2011",
+    "name": "Mojito Mint Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 25
+  },
+  {
+    "id": "p2012",
+    "code": "2012",
+    "name": "Passion Fruit Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 26
+  },
+  {
+    "id": "p2013",
+    "code": "2013",
+    "name": "Rose Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 27
+  },
+  {
+    "id": "p2014",
+    "code": "2014",
+    "name": "Cloudy Lemonade Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 28
+  },
+  {
+    "id": "p2015",
+    "code": "2015",
+    "name": "Bubble Gum Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 29
+  },
+  {
+    "id": "p2016",
+    "code": "2016",
+    "name": "Peach Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 30
+  },
+  {
+    "id": "p2017",
+    "code": "2017",
+    "name": "Ginger Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 31
+  },
+  {
+    "id": "p2018",
+    "code": "2018",
+    "name": "Red Grape Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 32
+  },
+  {
+    "id": "p2019",
+    "code": "2019",
+    "name": "White Strawberry Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 33
+  },
+  {
+    "id": "p2020",
+    "code": "2020",
+    "name": "Caribbean Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 34
+  },
+  {
+    "id": "p2021",
+    "code": "2021",
+    "name": "Cherry Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 35
+  },
+  {
+    "id": "p2022",
+    "code": "2022",
+    "name": "Pistachio Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 36
+  },
+  {
+    "id": "p2023",
+    "code": "2023",
+    "name": "Salted Caramel Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 37
+  },
+  {
+    "id": "p2024",
+    "code": "2024",
+    "name": "Black Grapes Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "750 ML"
+    ],
+    "sequence": 38
+  },
+  {
+    "id": "p2025",
+    "code": "2025",
+    "name": "Green Mint Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 39
+  },
+  {
+    "id": "p2026",
+    "code": "2026",
+    "name": "Cinnamon Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 40
+  },
+  {
+    "id": "p2028",
+    "code": "2028",
+    "name": "Lime/Lemon Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 41
+  },
+  {
+    "id": "p2029",
+    "code": "2029",
+    "name": "Kiwi Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 42
+  },
+  {
+    "id": "p2030",
+    "code": "2030",
+    "name": "Hasawy Lemon Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 43
+  },
+  {
+    "id": "p2031",
+    "code": "2031",
+    "name": "Ice Peach Tea Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 44
+  },
+  {
+    "id": "p2032",
+    "code": "2032",
+    "name": "Roman (Pomegranate) Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 45
+  },
+  {
+    "id": "p2033",
+    "code": "2033",
+    "name": "Green Apple Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 46
+  },
+  {
+    "id": "p2034",
+    "code": "2034",
+    "name": "Honey Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [],
+    "sequence": 47
+  },
+  {
+    "id": "p2038",
+    "code": "2038",
+    "name": "Dark Chocolate Sauce (G). BSC",
+    "category": "Syrups & sauces",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 48
+  },
+  {
+    "id": "p2039",
+    "code": "2039",
+    "name": "Caramel Sauce (G). BSC",
+    "category": "Syrups & sauces",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 49
+  },
+  {
+    "id": "p2040",
+    "code": "2040",
+    "name": "White Chocolate Sauce (G). BSC",
+    "category": "Syrups & sauces",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 50
+  },
+  {
+    "id": "p2041",
+    "code": "2041",
+    "name": "Toffee Caramel Sauce (C). BSC",
+    "category": "Syrups & sauces",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 51
+  },
+  {
+    "id": "p2042",
+    "code": "2042",
+    "name": "Pistachio Sauce (C). BSC",
+    "category": "Syrups & sauces",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 52
+  },
+  {
+    "id": "p2045",
+    "code": "2045",
+    "name": "Topping Chocolate Sauce. BSC",
+    "category": "Syrups & sauces",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 53
+  },
+  {
+    "id": "p2046",
+    "code": "2046",
+    "name": "Topping Caramel Sauce. BSC",
+    "category": "Syrups & sauces",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 54
+  },
+  {
+    "id": "p2047",
+    "code": "2047",
+    "name": "Mango Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 55
+  },
+  {
+    "id": "p2048",
+    "code": "2048",
+    "name": "Pineapple Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "BTL",
+    "sizes": [
+      "1000 ML",
+      "700 ML"
+    ],
+    "sequence": 56
+  },
+  {
+    "id": "p2050",
+    "code": "2050",
+    "name": "Vimto Syrup. BSC",
+    "category": "Syrups & sauces",
+    "unit": "710 ML* BTL",
+    "sizes": [],
+    "sequence": 57
+  },
+  {
+    "id": "p2051",
+    "code": "2051",
+    "name": "Hibiscus Sauce. BSC",
+    "category": "Syrups & sauces",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 58
+  },
+  {
+    "id": "p4002",
+    "code": "4002",
+    "name": "Blue Sky Sugar (S). BSC",
+    "category": "Sugar",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 59
+  },
+  {
+    "id": "p4003",
+    "code": "4003",
+    "name": "Sugar White (50K).BSC",
+    "category": "Sugar",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 60
+  },
+  {
+    "id": "p4004",
+    "code": "4004",
+    "name": "Tropicana (Diet) Sugar. BSC",
+    "category": "Sugar",
+    "unit": "SACHET",
+    "sizes": [],
+    "sequence": 61
+  },
+  {
+    "id": "p5001",
+    "code": "5001",
+    "name": "Vanilla Powder. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 62
+  },
+  {
+    "id": "p5003",
+    "code": "5003",
+    "name": "Big Train Mocha Powder. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 63
+  },
+  {
+    "id": "p5004",
+    "code": "5004",
+    "name": "Big Train Chocolate Powder. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 64
+  },
+  {
+    "id": "p5005",
+    "code": "5005",
+    "name": "Big Coffee Toffee Powder. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 65
+  },
+  {
+    "id": "p5007",
+    "code": "5007",
+    "name": "Red Velvet Powder. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 66
+  },
+  {
+    "id": "p5008",
+    "code": "5008",
+    "name": "Cerelac Honey. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 67
+  },
+  {
+    "id": "p5009",
+    "code": "5009",
+    "name": "Cerelac Fruits. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 68
+  },
+  {
+    "id": "p5010",
+    "code": "5010",
+    "name": "Cerelac Dates. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 69
+  },
+  {
+    "id": "p5011",
+    "code": "5011",
+    "name": "Almond Beans. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 70
+  },
+  {
+    "id": "p5012",
+    "code": "5012",
+    "name": "Karak Tea Powder. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 71
+  },
+  {
+    "id": "p5016",
+    "code": "5016",
+    "name": "Matcha Latte. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 72
+  },
+  {
+    "id": "p5017",
+    "code": "5017",
+    "name": "Sahlab. BSC",
+    "category": "Powders & ingredients",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 73
+  },
+  {
+    "id": "p5023",
+    "code": "5023",
+    "name": "Pineapple Slices. BSC",
+    "category": "Powders & ingredients",
+    "unit": "CAN * 10 PCS",
+    "sizes": [],
+    "sequence": 74
+  },
+  {
+    "id": "p6001",
+    "code": "6001",
+    "name": "Lemon. BSC",
+    "category": "Fresh produce",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 75
+  },
+  {
+    "id": "p6002",
+    "code": "6002",
+    "name": "Orange. BSC",
+    "category": "Fresh produce",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 76
+  },
+  {
+    "id": "p6003",
+    "code": "6003",
+    "name": "Avocado. BSC",
+    "category": "Fresh produce",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 77
+  },
+  {
+    "id": "p6004",
+    "code": "6004",
+    "name": "Mint (Nana) Leaves. BSC",
+    "category": "Fresh produce",
+    "unit": "TEIR*BDL",
+    "sizes": [],
+    "sequence": 78
+  },
+  {
+    "id": "p6006",
+    "code": "6006",
+    "name": "Beetroot. BSC",
+    "category": "Fresh produce",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 79
+  },
+  {
+    "id": "p6008",
+    "code": "6008",
+    "name": "Dates Shukari. BSC",
+    "category": "Fresh produce",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 80
+  },
+  {
+    "id": "p7001",
+    "code": "7001",
+    "name": "Black Berry Frozen. BSC",
+    "category": "Frozen",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 81
+  },
+  {
+    "id": "p7002",
+    "code": "7002",
+    "name": "Blue Berry Frozen. BSC",
+    "category": "Frozen",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 82
+  },
+  {
+    "id": "p7004",
+    "code": "7004",
+    "name": "Mango Frozen. BSC",
+    "category": "Frozen",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 83
+  },
+  {
+    "id": "p7005",
+    "code": "7005",
+    "name": "Straw Berry Frozen. BSC",
+    "category": "Frozen",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 84
+  },
+  {
+    "id": "p7006",
+    "code": "7006",
+    "name": "Rasp Berry Frozen. BSC",
+    "category": "Frozen",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 85
+  },
+  {
+    "id": "p7007",
+    "code": "7007",
+    "name": "Vanilla Ice Cream (10LTR). BSC",
+    "category": "Frozen",
+    "unit": "LTR",
+    "sizes": [],
+    "sequence": 86
+  },
+  {
+    "id": "p8001",
+    "code": "8001",
+    "name": "7 UP. BSC",
+    "category": "Drinks & dairy",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 87
+  },
+  {
+    "id": "p8002",
+    "code": "8002",
+    "name": "Code Red. BSC",
+    "category": "Drinks & dairy",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 88
+  },
+  {
+    "id": "p8003",
+    "code": "8003",
+    "name": "Red Bull. BSC",
+    "category": "Drinks & dairy",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 89
+  },
+  {
+    "id": "p8004",
+    "code": "8004",
+    "name": "Spark Soft Drinks (L). BSC",
+    "category": "Drinks & dairy",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 90
+  },
+  {
+    "id": "p8008",
+    "code": "8008",
+    "name": "Mixed Black Berry Juice. BSC",
+    "category": "Drinks & dairy",
+    "unit": "BTL* 1.4",
+    "sizes": [],
+    "sequence": 91
+  },
+  {
+    "id": "p8009",
+    "code": "8009",
+    "name": "Roman (Pomegranate) Juice. BSC",
+    "category": "Drinks & dairy",
+    "unit": "BTL* 1.4",
+    "sizes": [],
+    "sequence": 92
+  },
+  {
+    "id": "p8012",
+    "code": "8012",
+    "name": "Long Life Milk. BSC",
+    "category": "Drinks & dairy",
+    "unit": "LTR",
+    "sizes": [],
+    "sequence": 93
+  },
+  {
+    "id": "p8015",
+    "code": "8015",
+    "name": "Condensed Milk (397G). BSC",
+    "category": "Drinks & dairy",
+    "unit": "CAN * 397 ML",
+    "sizes": [],
+    "sequence": 94
+  },
+  {
+    "id": "p8016",
+    "code": "8016",
+    "name": "Whipping Cream. BSC",
+    "category": "Drinks & dairy",
+    "unit": "BTL * 200 ML",
+    "sizes": [],
+    "sequence": 95
+  },
+  {
+    "id": "p8017",
+    "code": "8017",
+    "name": "Cold Brew (Coffee). BSC",
+    "category": "Drinks & dairy",
+    "unit": "BTL",
+    "sizes": [],
+    "sequence": 96
+  },
+  {
+    "id": "p8020",
+    "code": "8020",
+    "name": "Berain Water. BSC",
+    "category": "Drinks & dairy",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 97
+  },
+  {
+    "id": "p8033",
+    "code": "8033",
+    "name": "GUINNESS BEER. BSC",
+    "category": "Drinks & dairy",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 98
+  },
+  {
+    "id": "p9001",
+    "code": "9001",
+    "name": "Espresso Coffee Beans. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 99
+  },
+  {
+    "id": "p9002",
+    "code": "9002",
+    "name": "Arabic Coffee Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 100
+  },
+  {
+    "id": "p9003",
+    "code": "9003",
+    "name": "French Coffee Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 101
+  },
+  {
+    "id": "p9004",
+    "code": "9004",
+    "name": "Turkish Coffee Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 102
+  },
+  {
+    "id": "p9005",
+    "code": "9005",
+    "name": "Black - Colombian Coffee. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 103
+  },
+  {
+    "id": "p9006",
+    "code": "9006",
+    "name": "Nescafe. BSC",
+    "category": "Coffee & tea",
+    "unit": "BTL * 200 GRM",
+    "sizes": [],
+    "sequence": 104
+  },
+  {
+    "id": "p9007",
+    "code": "9007",
+    "name": "German Tea. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 105
+  },
+  {
+    "id": "p9008",
+    "code": "9008",
+    "name": "Hibiscus Tea. BSC",
+    "category": "Coffee & tea",
+    "unit": "SACHET",
+    "sizes": [],
+    "sequence": 106
+  },
+  {
+    "id": "p9010",
+    "code": "9010",
+    "name": "Classic Black Tea. BSC",
+    "category": "Coffee & tea",
+    "unit": "SACHET",
+    "sizes": [],
+    "sequence": 107
+  },
+  {
+    "id": "p9011",
+    "code": "9011",
+    "name": "Moroccan Tea (Twining's Gun Powder). BSC",
+    "category": "Coffee & tea",
+    "unit": "BOX * 200 GRM",
+    "sizes": [],
+    "sequence": 108
+  },
+  {
+    "id": "p9012",
+    "code": "9012",
+    "name": "Twinning Green Tea Pure. BSC",
+    "category": "Coffee & tea",
+    "unit": "SACHET",
+    "sizes": [],
+    "sequence": 109
+  },
+  {
+    "id": "p9013",
+    "code": "9013",
+    "name": "Twinning Early Grey Tea. BSC",
+    "category": "Coffee & tea",
+    "unit": "SACHET",
+    "sizes": [],
+    "sequence": 110
+  },
+  {
+    "id": "p9014",
+    "code": "9014",
+    "name": "English Breakfast Tea. BSC",
+    "category": "Coffee & tea",
+    "unit": "SACHET",
+    "sizes": [],
+    "sequence": 111
+  },
+  {
+    "id": "p9015",
+    "code": "9015",
+    "name": "Twinning Lemon Ginger Tea. BSC",
+    "category": "Coffee & tea",
+    "unit": "SACHET",
+    "sizes": [],
+    "sequence": 112
+  },
+  {
+    "id": "p9016",
+    "code": "9016",
+    "name": "Hill (Cardamom) Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 113
+  },
+  {
+    "id": "p9017",
+    "code": "9017",
+    "name": "Ginger Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 114
+  },
+  {
+    "id": "p9018",
+    "code": "9018",
+    "name": "Mismar (Cloves) Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 115
+  },
+  {
+    "id": "p9019",
+    "code": "9019",
+    "name": "Cinnamon Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 116
+  },
+  {
+    "id": "p9020",
+    "code": "9020",
+    "name": "Pistachio Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 117
+  },
+  {
+    "id": "p9021",
+    "code": "9021",
+    "name": "Saffron (Q) Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 118
+  },
+  {
+    "id": "p9024",
+    "code": "9024",
+    "name": "Ethiopian Coffee Powder. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 119
+  },
+  {
+    "id": "p9027",
+    "code": "9027",
+    "name": "Ethiopian Coffee Beans. BSC",
+    "category": "Coffee & tea",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 120
+  },
+  {
+    "id": "p10001",
+    "code": "10001",
+    "name": "Garbage Bag. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 121
+  },
+  {
+    "id": "p10002",
+    "code": "10002",
+    "name": "Cleaning Mop. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 122
+  },
+  {
+    "id": "p10003",
+    "code": "10003",
+    "name": "Rag Yellow. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 123
+  },
+  {
+    "id": "p10004",
+    "code": "10004",
+    "name": "Cleaning Brush. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 124
+  },
+  {
+    "id": "p10005",
+    "code": "10005",
+    "name": "Cleaning Whipper. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 125
+  },
+  {
+    "id": "p10006",
+    "code": "10006",
+    "name": "Sponge. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 126
+  },
+  {
+    "id": "p10007",
+    "code": "10007",
+    "name": "Sponge Steel. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 127
+  },
+  {
+    "id": "p10008",
+    "code": "10008",
+    "name": "Insect Killer. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 128
+  },
+  {
+    "id": "p10009",
+    "code": "10009",
+    "name": "Hand Wash. BSC",
+    "category": "Cleaning & filters",
+    "unit": "LTR",
+    "sizes": [],
+    "sequence": 129
+  },
+  {
+    "id": "p10010",
+    "code": "10010",
+    "name": "Face Mask. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 130
+  },
+  {
+    "id": "p10011",
+    "code": "10011",
+    "name": "Gloves. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 131
+  },
+  {
+    "id": "p10012",
+    "code": "10012",
+    "name": "Hairnet. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 132
+  },
+  {
+    "id": "p10013",
+    "code": "10013",
+    "name": "Maxi (Napco) Roll. BSC",
+    "category": "Cleaning & filters",
+    "unit": "ROLL",
+    "sizes": [],
+    "sequence": 133
+  },
+  {
+    "id": "p10015",
+    "code": "10015",
+    "name": "Dettol. BSC",
+    "category": "Cleaning & filters",
+    "unit": "LTR",
+    "sizes": [],
+    "sequence": 134
+  },
+  {
+    "id": "p10016",
+    "code": "10016",
+    "name": "Napkin Whipes. BSC",
+    "category": "Cleaning & filters",
+    "unit": "CRT",
+    "sizes": [],
+    "sequence": 135
+  },
+  {
+    "id": "p10017",
+    "code": "10017",
+    "name": "Fairy (Dishwashing) Liquid. BSC",
+    "category": "Cleaning & filters",
+    "unit": "LTR",
+    "sizes": [],
+    "sequence": 136
+  },
+  {
+    "id": "p10018",
+    "code": "10018",
+    "name": "Glass Cleaner. BSC",
+    "category": "Cleaning & filters",
+    "unit": "LTR",
+    "sizes": [],
+    "sequence": 137
+  },
+  {
+    "id": "p10019",
+    "code": "10019",
+    "name": "Espresso Cleaning Powder. BSC",
+    "category": "Cleaning & filters",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 138
+  },
+  {
+    "id": "p10020",
+    "code": "10020",
+    "name": "American Filter. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 139
+  },
+  {
+    "id": "p10021",
+    "code": "10021",
+    "name": "German Filter. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 140
+  },
+  {
+    "id": "p10022",
+    "code": "10022",
+    "name": "Cold Brew Filter. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 141
+  },
+  {
+    "id": "p10023",
+    "code": "10023",
+    "name": "V60 Filter. BSC",
+    "category": "Cleaning & filters",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 142
+  },
+  {
+    "id": "p10024",
+    "code": "10024",
+    "name": "Sanitizer. BSC",
+    "category": "Cleaning & filters",
+    "unit": "BTL",
+    "sizes": [],
+    "sequence": 143
+  },
+  {
+    "id": "p10025",
+    "code": "10025",
+    "name": "Cleanser Dispenser Btl. BSC",
+    "category": "Cleaning & filters",
+    "unit": "BTL",
+    "sizes": [],
+    "sequence": 144
+  },
+  {
+    "id": "p11001",
+    "code": "11001",
+    "name": "4 OZ Espresso Hot Cup. BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 145
+  },
+  {
+    "id": "p11002",
+    "code": "11002",
+    "name": "9 OZ Hot Paper Cup. BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 146
+  },
+  {
+    "id": "p11004",
+    "code": "11004",
+    "name": "12 OZ Hot Paper Cup. BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 147
+  },
+  {
+    "id": "p11006",
+    "code": "11006",
+    "name": "16 OZ Hot Paper Cup. BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 148
+  },
+  {
+    "id": "p11007",
+    "code": "11007",
+    "name": "7 OZ Hot Paper Cup. BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 149
+  },
+  {
+    "id": "p11008",
+    "code": "11008",
+    "name": "14 OZ Plastic Cold Cup (Mocha). BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 150
+  },
+  {
+    "id": "p11009",
+    "code": "11009",
+    "name": "500 U Plastic Cold Cup 16 OZ (Spanish). BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 151
+  },
+  {
+    "id": "p11010",
+    "code": "11010",
+    "name": "700 U Plastic Cold Cup 22 OZ (Large). BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 152
+  },
+  {
+    "id": "p11011",
+    "code": "11011",
+    "name": "2*2 Cup Holder / Molded. BSC",
+    "category": "Cups & packaging",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 153
+  },
+  {
+    "id": "p11012",
+    "code": "11012",
+    "name": "4*4 Cup Holder / Molded. BSC",
+    "category": "Cups & packaging",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 154
+  },
+  {
+    "id": "p11013",
+    "code": "11013",
+    "name": "Straw Juice 10MM. BSC",
+    "category": "Cups & packaging",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 155
+  },
+  {
+    "id": "p11014",
+    "code": "11014",
+    "name": "Straw Juice 6MM. BSC",
+    "category": "Cups & packaging",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 156
+  },
+  {
+    "id": "p11015",
+    "code": "11015",
+    "name": "Bakery Bag. BSC",
+    "category": "Cups & packaging",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 157
+  },
+  {
+    "id": "p11016",
+    "code": "11016",
+    "name": "Plastic Bag (L). BSC",
+    "category": "Cups & packaging",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 158
+  },
+  {
+    "id": "p11017",
+    "code": "11017",
+    "name": "Plastic Roll (Sealing). BSC",
+    "category": "Cups & packaging",
+    "unit": "ROLL",
+    "sizes": [],
+    "sequence": 159
+  },
+  {
+    "id": "p11018",
+    "code": "11018",
+    "name": "Machine (POS) Roll. BSC",
+    "category": "Cups & packaging",
+    "unit": "ROLL",
+    "sizes": [],
+    "sequence": 160
+  },
+  {
+    "id": "p11019",
+    "code": "11019",
+    "name": "Mada Roll. BSC",
+    "category": "Cups & packaging",
+    "unit": "ROLL",
+    "sizes": [],
+    "sequence": 161
+  },
+  {
+    "id": "p11020",
+    "code": "11020",
+    "name": "Wooden Stirrer. BSC",
+    "category": "Cups & packaging",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 162
+  },
+  {
+    "id": "p11021",
+    "code": "11021",
+    "name": "Plastic Spoon. BSC",
+    "category": "Cups & packaging",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 163
+  },
+  {
+    "id": "p11022",
+    "code": "11022",
+    "name": "Plastic Fork. BSC",
+    "category": "Cups & packaging",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 164
+  },
+  {
+    "id": "p11023",
+    "code": "11023",
+    "name": "Rubber Band. BSC",
+    "category": "Cups & packaging",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 165
+  },
+  {
+    "id": "p11024",
+    "code": "11024",
+    "name": "BOTTLE 1.0 LTR. BSC",
+    "category": "Cups & packaging",
+    "unit": "BTL",
+    "sizes": [],
+    "sequence": 166
+  },
+  {
+    "id": "p11025",
+    "code": "11025",
+    "name": "BOTTLE 1.5 LTR. BSC",
+    "category": "Cups & packaging",
+    "unit": "BTL",
+    "sizes": [],
+    "sequence": 167
+  },
+  {
+    "id": "p11026",
+    "code": "11026",
+    "name": "Blue-Sky Box. BSC",
+    "category": "Cups & packaging",
+    "unit": "BOX",
+    "sizes": [],
+    "sequence": 168
+  },
+  {
+    "id": "p11029",
+    "code": "11029",
+    "name": "380ML Plastic Cold Cup (Small). BSC",
+    "category": "Cups & packaging",
+    "unit": "CUP",
+    "sizes": [],
+    "sequence": 169
+  },
+  {
+    "id": "p11030",
+    "code": "11030",
+    "name": "Blue Sky Cupholder. BSC",
+    "category": "Cups & packaging",
+    "unit": "PCS",
+    "sizes": [],
+    "sequence": 170
+  },
+  {
+    "id": "p11034",
+    "code": "11034",
+    "name": "Plastic Bag (S). BSC",
+    "category": "Cups & packaging",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 171
+  },
+  {
+    "id": "p11042",
+    "code": "11042",
+    "name": "Straw Paper 6 MM. BSC",
+    "category": "Cups & packaging",
+    "unit": "PKT",
+    "sizes": [],
+    "sequence": 172
+  },
+  {
+    "id": "p11046",
+    "code": "11046",
+    "name": "BlueSky Paper Bag. BSC",
+    "category": "Cups & packaging",
+    "unit": "KG",
+    "sizes": [],
+    "sequence": 173
+  }
+];
+const LEGACY_PRODUCTS=[
   {
     "id": "p1006",
     "code": "1006",
